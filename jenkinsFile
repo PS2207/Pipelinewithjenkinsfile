@@ -1,16 +1,9 @@
 pipeline{
     agent any
-    // tools{
-    //     maven "maven"
-    // }
-    // environment{
-    //     VERSION_NAME="1.1"
-    // }
     stages{
         stage('compile'){
            steps{
             sh "javac Main.java"
-            // SH 'echo "${VERSION_NAME}"'
            }
         }
         stage('run'){
@@ -20,16 +13,4 @@ pipeline{
         }
     }
 
-
-    // post{
-    //     always{
-    //         sh 'echo "always"'
-    //     }
-    //     success{
-    //         sh 'echo "success"'
-    //     }
-    //     failure{
-    //         sh 'echo "failure"'
-    //     }
-    // }
 }
